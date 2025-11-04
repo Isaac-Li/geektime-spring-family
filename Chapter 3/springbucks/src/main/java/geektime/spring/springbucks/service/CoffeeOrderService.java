@@ -20,6 +20,10 @@ public class CoffeeOrderService {
     private CoffeeOrderRepository orderRepository;
 
     public CoffeeOrder createOrder(String customer, Coffee...coffee) {
+        if (coffee == null || coffee.length < 1) {
+            log.error("Coffee items cannot be empty");
+            throw new IllegalArgumentException("Coffee items cannot be empty");
+        }
         CoffeeOrder order = CoffeeOrder.builder()
                 .customer(customer)
                 .items(new ArrayList<>(Arrays.asList(coffee)))
