@@ -59,6 +59,12 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>3.14.2</version>
+			<scope>test</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>com.h2database</groupId>
